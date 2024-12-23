@@ -1,5 +1,8 @@
 # react-native-svg-barcode
 
+Refactored code from:
+[react-native-barcode-generator](https://github.com/Kichiyaki/react-native-barcode-generator)
+
 A React Native component that displays barcodes using SVG.
 
 <img src="images/app-example.jpg" alt="Screenshot Example" width="250px">
