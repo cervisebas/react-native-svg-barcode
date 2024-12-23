@@ -2,20 +2,21 @@
   "name": "react-native-svg-barcode",
   "version": "0.1.0",
   "description": "React Native Svg Barcode",
-  "source": "./src/index.tsx",
+  "source": "./src\\index.tsx",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
   "exports": {
     ".": {
       "import": {
-        "types": "./lib/typescript/module/src/index.d.ts",
-        "default": "./lib/module/index.js"
+        "types": "./lib\\typescript\\module\\src\\index.d.ts",
+        "default": "./lib\\module\\index.js"
       },
       "require": {
-        "types": "./lib/typescript/commonjs/src/index.d.ts",
-        "default": "./lib/commonjs/index.js"
+        "types": "./lib\\typescript\\commonjs\\src\\index.d.ts",
+        "default": "./lib\\commonjs\\index.js"
       }
-    }
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "src",
@@ -80,6 +81,7 @@
     "react": "18.3.1",
     "react-native": "0.76.5",
     "react-native-builder-bob": "^0.35.2",
+    "react-native-svg": "^15.10.1",
     "release-it": "^17.10.0",
     "typescript": "^5.2.2"
   },
@@ -88,7 +90,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-svg": "*"
   },
   "workspaces": [
     "example"
@@ -158,7 +161,6 @@
     "source": "src",
     "output": "lib",
     "targets": [
-      "codegen",
       [
         "commonjs",
         {
@@ -174,7 +176,6 @@
       [
         "typescript",
         {
-          "project": "tsconfig.build.json",
           "esm": true
         }
       ]
@@ -196,5 +197,9 @@
     "languages": "js",
     "type": "library",
     "version": "0.45.5"
+  },
+  "types": "./lib\\typescript\\commonjs\\src\\index.d.ts",
+  "dependencies": {
+    "jsbarcode": "^3.11.6"
   }
 }

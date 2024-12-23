@@ -1,12 +1,13 @@
-import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'react-native-svg-barcode';
+import { View, StyleSheet, Dimensions } from 'react-native';
+import { Barcode } from 'react-native-svg-barcode';
 
-const result = multiply(3, 7);
+const value = 'Hello World';
+const width = Dimensions.get('window').width / 2;
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Barcode format={'CODE128'} value={value} text={value} maxWidth={width} />
     </View>
   );
 }
