@@ -30,7 +30,7 @@ export interface BarcodeProps {
   format?: Format;
   lineColor?: string;
   background?: string;
-  text?: React.ReactNode;
+  text?: React.ReactNode | string;
   textStyle?: TextStyle;
   style?: ViewStyle;
   onError?: (err: any) => void;
